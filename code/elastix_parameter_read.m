@@ -61,7 +61,7 @@ while ischar(tline)
         tok=regexp(tline,'"(.*)"','tokens');
         value=tok{1}{1};
     else %It's a numeric value
-        tok=regexp(tline,'\w+ ([\d\. -]+)\)','tokens');
+        tok=regexp(tline,'\w+ ([\d\. -e]+)\)','tokens');
         value=str2num(tok{1}{1});
     end
     % - - - - - - - - - - - - - - - - - - - - - - - - -
